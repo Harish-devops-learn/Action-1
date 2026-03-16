@@ -1,0 +1,17 @@
+name: Cowsay Workflow
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Executing script
+        run: |
+            chmod +x cowsay.sh
+            ./cowsay.sh
