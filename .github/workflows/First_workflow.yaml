@@ -5,15 +5,20 @@ on: push
 jobs:
   first_job:
     runs-on: ubuntu-latest
+    
     steps:
+
       - name: Checkout
         uses: actions/checkout@v6
         
-      - name: Welcome message
-        run: echo "Starting first run on github action"
+      - name: Check on files
+        run: | 
+            echo "Starting first run on github action"
+            ls -lahrt
+            cat README.md
       
-      - name: List files
-        run: ls
-
-      - name: show readme
-        run: cat README.md
+#      - name: List files
+#        run: ls
+#
+#      - name: show readme
+#        run: cat README.md
